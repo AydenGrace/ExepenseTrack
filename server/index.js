@@ -24,12 +24,9 @@ app.use(
 );
 
 app.use(express.static(path.join(__DIRNAME, "client/dist")));
-
 app.use(generalLimiter);
-
 app.use(routes);
-
-app.get("*", (req, res) => {
+app.get(/(.*)/, (req, res) => {
   res.sendFile(path.join(__DIRNAME, "client", "dist", "index.html"));
 });
 

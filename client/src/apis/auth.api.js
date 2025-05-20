@@ -51,6 +51,7 @@ export async function update(values) {
       headers: {
         "Content-type": "application/json",
       },
+      credentials: "include",
     });
     const updatedUser = await response.json();
 
@@ -68,6 +69,7 @@ export async function updateAvatar(values) {
       headers: {
         "Content-type": "application/json",
       },
+      credentials: "include",
     });
     const updatedUserAvatar = await response.json();
 

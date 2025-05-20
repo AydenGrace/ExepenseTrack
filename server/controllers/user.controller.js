@@ -128,7 +128,7 @@ const updateUser = async (req, res) => {
     );
     res.status(200).json(updatedUser);
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
   }
 };
 

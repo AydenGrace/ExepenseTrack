@@ -47,9 +47,11 @@ export default function Data() {
       // récupération de l'utilisateur modifié depuis notre call http dans le dosssier apis > auth.api.js
       const updateUser = await update(newData);
       // modification du profil local
+      console.log(updateUser);
+
       setProfile(newData);
       // modification du localStorage
-      localStorage.setItem("user", JSON.stringify(updateUser));
+      // localStorage.setItem("user", JSON.stringify(updateUser));
       // modification de l'utilisateur dans le provider
       setUser(updateUser);
       // permet de repasser en mode affichage

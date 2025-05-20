@@ -110,7 +110,9 @@ const signin = async (req, res) => {
 // méthodes pour mettre à jour les utilisateurs
 
 const updateUser = async (req, res) => {
-  console.log(req.body);
+  console.log("UPDATE " + req.body);
+  console.log("UPDATE " + req.user);
+
   try {
     const { username, email } = req.body;
     const updatedUser = await User.findByIdAndUpdate(

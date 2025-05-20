@@ -10,7 +10,7 @@ const authentication = async (req, res, next) => {
     req.user = await User.findById(decoded.sub);
     next();
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
     return res.status(401).json({ message: "Accès non authorisé." });
   }
 };

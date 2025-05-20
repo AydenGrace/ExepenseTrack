@@ -47,7 +47,7 @@ export default function ProfileAvatar({
 
       // récupération de l'URL de l'image insérée
       const { data: url } = await supabase.storage
-        .from("images")
+        .from("expenses-track")
         .getPublicUrl(fileName);
 
       // requête HTTP pour modifier l'avatar en BDD, l'identifiant est nécessaire à la requête dans le backend

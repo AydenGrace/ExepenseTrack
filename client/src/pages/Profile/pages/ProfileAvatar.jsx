@@ -39,7 +39,7 @@ export default function ProfileAvatar({
 
       // envoi du nom de fichier et de l'image sur le stockage supabase
       let { data, error } = await supabase.storage
-        .from("images")
+        .from("expenses-track")
         .upload(fileName, file);
 
       // gestion de la possible erreur
